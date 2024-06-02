@@ -10,17 +10,17 @@ namespace Assignment_Classes
         // May 29th 2024
         // Assignment - Basic Console Application Using Classes
 
-        static Book[] books = new Book[10];
+        static Book[] books = new Book[10]; // set an array of 10
         static void Main(string[] args)
         {
-            PreLoad();
+            PreLoad(); // calling list of array and menu from main
             Menu();
 
 
 
         }// Main
 
-        public static void Menu()
+        public static void Menu() // Menu selection for user
         {
             
                 Console.WriteLine("Choose a menu option: ");
@@ -30,7 +30,7 @@ namespace Assignment_Classes
                 Console.WriteLine("4 - Exit the program");
                 string userInput = Console.ReadLine();
 
-                switch (userInput)
+                switch (userInput) // How menu options goes to each method
                 {
                     case "1":
                         AddANewBook1();
@@ -42,7 +42,7 @@ namespace Assignment_Classes
                         UpdateInformation();
                         break;
                     case "4":
-                        Console.WriteLine("Exit");
+                        Console.WriteLine("Exiting.. Goodbye");
                         break;
                     default:
                         Console.WriteLine("Invalid");
@@ -52,7 +52,7 @@ namespace Assignment_Classes
 
 
         }// Menu
-        public static void PreLoad()
+        public static void PreLoad() // List of items in array
         {
             books[0] = new Book("Happy Place", "Emily Henry", 2023);
             books[1] = new Book("The Nightingale", "Kristin Hannah", 2015);
